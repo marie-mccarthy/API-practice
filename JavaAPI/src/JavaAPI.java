@@ -14,11 +14,9 @@ public class JavaAPI
 			System.out.println("input a word and I will tell you if it is plural or not");
 			Scanner userInputWord= new Scanner(System.in);
 			String word = userInputWord.nextLine();	
-			//int lastLetter = word.length();
-			//int firstLetter= word.length()-1;
 			int lastLetter = word.length()-1;
 		;
-		//	String last = word.substring(lastLetter,word.length());
+			String last = word.substring(lastLetter,word.length());
 			if( word.substring(lastLetter,word.length())==("s"))
 				{
 					System.out.println("not plural");
@@ -58,7 +56,7 @@ public class JavaAPI
 			{
 				if(letters2 == "a")
 				{
-					System.out.println("a".substring());
+					("a");
 				}
 				if(letters2 == "e")
 				{
