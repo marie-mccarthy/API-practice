@@ -7,7 +7,7 @@ public class JavaAPI
 		{
 			exercise1();
 			exercise2();
-	//		exercise3();
+			exercise3();
 		}
 		public static String exercise1()
 		{
@@ -31,55 +31,82 @@ public class JavaAPI
 		{
 			System.out.println("input a word");
 			Scanner userInputWord2= new Scanner(System.in);
-			String word2 = userInputWord2.nextLine();			
-			String letters = word2.substring(0, word2.length());
-			
-			for(int i = 1; i<word2.length();i++)
+			char vowel1 = 0;
+			char vowel2 = 0;
+			char vowel3 = 0;
+			char vowel4 = 0;
+			char vowel5 = 0;			
+			String word = userInputWord2.nextLine();			
+			String letters2 = word.substring(0, word.length());			
+			for(int i = 1; i<word.length();i++)
 			{
-				if((letters == "a")||(letters == "e")||(letters == "i")||(letters == "o")||(letters == "u"))
-				{
-					vowel++;
+				if(word.substring(i,i+1).equals("a"))
+				{				
+					vowel1 = word.charAt(i);
 				}
+				if(word.substring(i,i+1).equals("e"))
+				{
+					vowel2 = word.charAt(i);
+				}
+				if(word.substring(i,i+1).equals("i"))
+				{
+					vowel3 = word.charAt(i);
+				}				
+				if(word.substring(i,i+1).equals("o"))
+				{
+					vowel4 = word.charAt(i);
+				}				
+				if(word.substring(i,i+1).equals("u"))
+				{
+					vowel5 = word.charAt(i);
+				}
+				else
+				{
 					
-			}			
-			System.out.println(vowel+" vowel");
-			return word2;			
+				}
+							
+			}
+			int v1 = (word.indexOf(vowel1));
+			int v2 = (word.indexOf(vowel2));
+			int v3 = (word.indexOf(vowel3));
+			int v4 = (word.indexOf(vowel2));
+			int v5 = (word.indexOf(vowel3));
+			System.out.println("Vowel 1+"+v1);
+			System.out.println("Vowel 2+"+v2);
+			System.out.println("Vowel 3+"+v3);
+			System.out.println("Vowel 4+"+v4);
+			System.out.println("Vowel 5+"+v5);
+			
+			
+			//System.out.println(sum);
+			return word;
 		}
 		public static String exercise3()
 			{
 			System.out.println("input your full name");
 			Scanner userInputWord2= new Scanner(System.in);
+			//find first vowel
+			char vowel = 0;
 			String name = userInputWord2.nextLine();			
 			String letters2 = name.substring(0, name.length());
 			
-			for(int i = 1; i<name.length();i++)
+			for(int i = 0; i<name.length();i++)
 			{
-				if(letters2 == "a")
+				if(name.substring(i,i+1).equals("a")||name.substring(i,i+1).equals("e")||name.substring(i,i+1).equals("i")||name.substring(i,i+1).equals("o")||name.substring(i,i+1).equals("o"))
 				{
-					("a");
+				
+					vowel = name.charAt(i);
 				}
-				if(letters2 == "e")
+				else
 				{
-					System.out.println("");
+					
 				}
-				if(letters2 == "i")
-				{
-					System.out.println("");
-				}
-				if(letters2 == "o")
-				{
-					System.out.println("");
-				}
-				if(letters2 == "u")
-				{
-					System.out.println("");
-				}
-				else 
-				{
-					System.out.println("Your name has no vowels");
-				}
-			}							
-			return letters2;	
+				
+			}				
+			int last=1;
+			System.out.println(name.lastIndexOf(vowel));
+			return letters2;
+			
 				
 			}
 			
